@@ -107,7 +107,7 @@ function App() {
       ) : submissionStatus === "success" ? (
         <ResponseComponent responseMessage={responseMessage} />
       ) : (
-        <div className="waiting-message">Generating Debriefing Document ... Please wait.</div>
+        <div className="waiting-message"><br></br>Generating Debriefing Document ... Please wait.</div>
       )}
     </div>
   );

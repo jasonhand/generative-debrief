@@ -27,15 +27,16 @@ form label {
 }
 
 form input {
-    width: 100%;
+    width: calc(100% - 30px); /* Adjust the width and padding as needed */
     background: #e8b7db;
-    padding: 10px 5px;
+    padding: 10px;
     border: 1px solid #ccc;
-    /*box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64); */
     border-radius: 6px;
     margin-top: 15px;
     font-size: 20px;
 }
+
+
 
 button {
     background: #632CA6;
@@ -58,9 +59,22 @@ button:hover {
 .waiting-message {
     font-size: 24px;
     margin-top: 20px;
-    padding: 20px;
     color: #a310a8;
-}
+    animation: fadeInOut 2s infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
 
 .responseTitle {
     font-size: 32px;
@@ -72,12 +86,13 @@ button:hover {
 }
 
 .response {
-    font-size: 22px;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif; 
     margin-top: 20px;
-    padding: 100px;
+    padding: 75px;
     color: #632CA6;
     box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64);
-    letter-spacing: 1px;
+    letter-spacing: 6px;
 }
 
 .logo {
