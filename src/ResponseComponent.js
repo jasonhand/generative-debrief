@@ -9,7 +9,7 @@ datadogRum.init({
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
-    version: '1.0.1', 
+    version: '1.0.2', 
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
     trackUserInteractions: true,

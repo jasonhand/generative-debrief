@@ -103,3 +103,10 @@ button:hover {
     margin-top: 20px; /* Add top margin as needed */
     padding: 20px;
 }
+
+/* Example of media query for small screens */
+@media (max-width: 768px) {
+  input[type="text"] {
+    max-width: 100%; /* Adjust this value based on your design */
+  }
+}

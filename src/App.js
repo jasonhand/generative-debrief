@@ -12,7 +12,7 @@ datadogRum.init({
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
-    version: '1.0.1', 
+    version: '1.0.2', 
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
     trackUserInteractions: true,
@@ -98,33 +98,26 @@ function App() {
       {submissionStatus === "unsubmitted" || submissionStatus === "error" ? (
         <form onSubmit={handleSubmit}>
           {/* Form fields */}
-          <label>Title:
+          <label>Title:</label>
           <input type="text" name="title" onChange={handleChange} />
-          </label>
 
-          <label>Presenter:
+          <label>Presenter:</label>
           <input type="text" name="presenter" onChange={handleChange} />
-          </label>
 
-          <label>Abstract:
+          <label>Abstract:</label>
           <input type="text" name="abstract" onChange={handleChange} />
-          </label>
 
-          <label>Agenda:
+          <label>Agenda:</label>
           <input type="text" name="agenda" onChange={handleChange} />
-          </label>
 
-          <label>Takeaways:
+          <label>Takeaways:</label>
           <input type="text" name="takeaways" onChange={handleChange} />
-          </label>
 
-          <label>Tools:
+          <label>Tools:</label>
           <input type="text" name="tools" onChange={handleChange} />
-          </label>
 
-          <label>Links:
+          <label>Links:</label>
           <input type="text" name="links" onChange={handleChange} />
-          </label>
 
           <button type="submit">Submit</button>
         </form>
@@ -138,3 +131,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
