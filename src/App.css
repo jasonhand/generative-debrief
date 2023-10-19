@@ -1,0 +1,90 @@
+/* App.css */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Change the flex direction to column */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background: #e622d9;
+    border-radius: 8px;
+    box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64);
+    padding: 20px;
+    width: 600px;
+}
+
+form label {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    background: #e8b7db;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    /*box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64); */
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+button {
+    background: #632CA6;
+    width: 100%;
+    height: 100px;
+    font-size: 32px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64);
+
+}
+
+button:hover {
+    background: #330043;
+}
+
+.waiting-message {
+    font-size: 24px;
+    margin-top: 20px;
+    padding: 20px;
+    color: #a310a8;
+}
+
+.responseTitle {
+    font-size: 32px;
+    font-weight: bolder;
+    margin-top: 20px;
+    padding: 20px;
+    color: #632CA6;
+    box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64);
+}
+
+.response {
+    font-size: 22px;
+    margin-top: 20px;
+    padding: 100px;
+    color: #632CA6;
+    box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64);
+    letter-spacing: 1px;
+}
+
+.logo {
+    display: block;
+    max-width: 100%; /* Adjust the width as needed */
+    height: auto;
+    margin: 0 auto; /* Center the logo horizontally */
+    margin-top: 20px; /* Add top margin as needed */
+    padding: 20px;
+}
