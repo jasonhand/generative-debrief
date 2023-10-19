@@ -10,7 +10,7 @@ datadogRum.init({
     clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
     site: 'datadoghq.com',
     service:'generative-debrief',
-    env:'<ENV_NAME>',
+    env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
     version: '1.0.0', 
     sessionSampleRate:100,
