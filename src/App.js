@@ -2,6 +2,29 @@ import React, { useState } from "react";
 import "./App.css";
 import ResponseComponent from "./ResponseComponent";
 
+//RUM Integration //
+import { datadogRum } from '@datadog/browser-rum';
+
+datadogRum.init({
+    applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',
+    clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
+    site: 'datadoghq.com',
+    service:'generative-debrief',
+    env:'<ENV_NAME>',
+    // Specify a version number to identify the deployed version of your application in Datadog 
+    version: '1.0.0', 
+    sessionSampleRate:100,
+    sessionReplaySampleRate: 20,
+    trackUserInteractions: true,
+    trackResources: true,
+    trackLongTasks: true,
+    defaultPrivacyLevel:'mask-user-input'
+});
+    
+datadogRum.startSessionReplayRecording();
+
+// End RUM Integration
+
 function App() {
   const [formData, setFormData] = useState({
     title: "",
