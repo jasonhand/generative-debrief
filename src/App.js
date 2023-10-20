@@ -35,6 +35,7 @@ function App() {
     takeaways: "",
     tools: "",
     links: "",
+    model: ""
   });
 
   const [submissionStatus, setSubmissionStatus] = useState("unsubmitted");
@@ -79,6 +80,7 @@ function App() {
             takeaways: "",
             tools: "",
             links: "",
+            model: ""
           });
         }, 2000);
       } else {
@@ -99,26 +101,30 @@ function App() {
         <form onSubmit={handleSubmit}>
           {/* Form fields */}
           <label>Title:</label>
-          <input type="text" name="title" onChange={handleChange} />
+          <input type="text" name="title" placeholder="Type the title of your presentation" onChange={handleChange} />
 
           <label>Presenter:</label>
-          <input type="text" name="presenter" onChange={handleChange} />
+          <input type="text" name="presenter" placeholder="Type the presenter(s) name(s)" onChange={handleChange} />
 
           <label>Abstract:</label>
-          <input type="text" name="abstract" onChange={handleChange} />
+          <input type="text" name="abstract" placeholder="Type the abstract or a brief summary in your words" onChange={handleChange} />
 
           <label>Agenda:</label>
-          <input type="text" name="agenda" onChange={handleChange} />
+          <input type="text" name="agenda" placeholder="Type your presentation agenda separated by commas" onChange={handleChange} />
 
           <label>Takeaways:</label>
-          <input type="text" name="takeaways" onChange={handleChange} />
+          <input type="text" name="takeaways" placeholder="Type your takeaways" onChange={handleChange} />
 
           <label>Tools:</label>
-          <input type="text" name="tools" onChange={handleChange} />
+          <input type="text" name="tools" placeholder="Type your tools mentioned" onChange={handleChange} />
 
           <label>Links:</label>
-          <input type="text" name="links" onChange={handleChange} />
-
+          <input type="text" name="links" placeholder="Type your links mentioned" onChange={handleChange} />
+          <label htmlFor="model">Model:</label>
+            <select id="model" name="model" defaultValue="ChatGPT4" onChange={handleChange}>
+              <option value="ChatGPT3">ChatGPT3.5-turbo</option>
+              <option value="ChatGPT4">ChatGPT4</option>
+            </select>
           <button type="submit">Submit</button>
         </form>
       ) : submissionStatus === "success" ? (
@@ -131,8 +137,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-

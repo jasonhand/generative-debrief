@@ -13,7 +13,7 @@ body {
 
 form {
   background: #e622d9;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64);
   padding: 20px;
   width: 600px;
@@ -45,7 +45,7 @@ button {
   border: none;
   color: white;
   padding: 20px 20px;
-  border-radius: 6px;
+/* border-radius: 6px; */
   cursor: pointer;
   box-shadow: 3px 3px rgb(248, 7, 192), -1em 0 1em rgb(66, 2, 64);
 }
@@ -84,10 +84,8 @@ button:hover {
 .response {
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
-  margin-top: 20px;
   padding: 75px;
   color: #632CA6;
-  letter-spacing: 6px;
 }
 
 .logo {
@@ -125,7 +123,7 @@ button:hover {
   }
 }
 
-.app-name {
+.name {
   display: block;
   font-size: 22px;
   font-weight: bold;
@@ -137,7 +135,34 @@ button:hover {
 
 /* Add a media query for mobile devices */
 @media (max-width: 768px) {
-  .app-name {
+  .name {
     font-size: 14px; /* Set the font size for mobile devices */
   }
 }
+
+/* CSS for the Dropdown Box */
+
+/* Apply styling to the label */
+label[for="model"] {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the select element (dropdown list) */
+select#model {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Style the options within the select element */
+select#model option {
+  font-size: 16px;
+  padding: 5px;
+  background-color: #fff; /* Set the background color as needed */
+  color: #333; /* Set the text color as needed */
+}
+
