@@ -32,8 +32,6 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-      - name: Datadog Service Catalog Metadata Provider
-        uses: arcxp/datadog-service-catalog-metadata-provider@v2.1.0
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
