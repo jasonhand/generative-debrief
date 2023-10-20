@@ -4,6 +4,7 @@ import ResponseComponent from "./ResponseComponent";
 
 //RUM Integration //
 import { datadogRum } from '@datadog/browser-rum';
+//
 
 datadogRum.init({
     applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',
@@ -12,7 +13,7 @@ datadogRum.init({
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
-    version: '1.0.2', 
+    version: '1.0.3', 
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
     trackUserInteractions: true,

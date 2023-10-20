@@ -1,6 +1,7 @@
 /* App.css */
 body {
-  font-family: "Montserrat", sans-serif;
+  /*font-family: "Montserrat", sans-serif;*/
+  font-family: nationalweb,Helvetica,Arial,sans-serif;
   background-color: #ffffff;
   margin: 0;
   padding: 0;
@@ -24,6 +25,7 @@ form label {
   font-size: 22px;
   font-weight: 600;
   margin-top: 5px;
+  color: #632CA6;
 }
 
 form input {
@@ -34,6 +36,7 @@ form input {
   border-radius: 6px;
   margin-top: 5px;
   font-size: 20px;
+  color: #632CA6; /* Text color matching the form color */
 }
 
 button {
@@ -88,6 +91,13 @@ button:hover {
   color: #632CA6;
 }
 
+.instructions {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  color: #632CA6;
+}
+
 .logo {
   display: block;
   max-width:35%;
@@ -131,6 +141,7 @@ button:hover {
   height: auto;
   margin: 0 auto;
   padding: 10px;
+  color: #632CA6;
 }
 
 /* Add a media query for mobile devices */
@@ -140,13 +151,12 @@ button:hover {
   }
 }
 
-/* CSS for the Dropdown Box */
-
 /* Apply styling to the label */
 label[for="model"] {
   display: block;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #632CA6; /* Text color matching the form color */
 }
 
 /* Style the select element (dropdown list) */
@@ -156,13 +166,14 @@ select#model {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  background-color: #e8b7db; /* Set the background color to match the form */
+  color: #632CA6; /* Text color matching the form color */
 }
 
 /* Style the options within the select element */
 select#model option {
   font-size: 16px;
   padding: 5px;
-  background-color: #fff; /* Set the background color as needed */
-  color: #333; /* Set the text color as needed */
+  background-color: #e8b7db; /* Set the background color to match the form */
+  color: #632CA6; /* Text color matching the form color */
 }
-
