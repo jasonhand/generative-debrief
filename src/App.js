@@ -1,13 +1,11 @@
+import { datadogRum } from '@datadog/browser-rum';
+import { datadogLogs } from '@datadog/browser-logs';
 import React, { useState } from "react";
 import "./App.css";
 import ResponseComponent from "./ResponseComponent";
-import { datadogLogs } from '@datadog/browser-logs';
 
-datadogLogs.logger.info('Something happened on index', {name: 'buttonName', id: 123 });
 
-//RUM Integration //
-import { datadogRum } from '@datadog/browser-rum';
-//
+datadogLogs.logger.info('Something happened on App.js', {name: 'app_log', id: 123 });
 
 datadogRum.init({
     applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',

@@ -1,9 +1,8 @@
 import React from "react";
-//RUM Integration //
 import { datadogRum } from '@datadog/browser-rum';
 import { datadogLogs } from '@datadog/browser-logs';
 
-datadogLogs.logger.info('Something happened on index', {name: 'buttonName', id: 123 });
+datadogLogs.logger.info('Something happened on ResponseComponent.js', {name: 'response_log', id: 125 });
 
 datadogRum.init({
     applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',
