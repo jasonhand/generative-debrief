@@ -15,6 +15,7 @@ datadogRum.init({
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
     version: '1.0.5', 
+    forwardErrorsToLogs: true,
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
     trackUserInteractions: true,
@@ -27,17 +28,6 @@ datadogRum.init({
 datadogRum.startSessionReplayRecording();
 
 // End RUM Integration
-
-// Adding Logging
-
-datadogLogs.init({
-    clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
-    site: 'datadoghq.com',
-    forwardErrorsToLogs: true,
-    sessionSampleRate: 100
-});
-
-// End Logging
 
 function App() {
   const [formData, setFormData] = useState({
