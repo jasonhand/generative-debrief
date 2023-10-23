@@ -3,7 +3,7 @@ import React from "react";
 import { datadogRum } from '@datadog/browser-rum';
 import { datadogLogs } from '@datadog/browser-logs';
 
-datadogLogs.logger.info('Button clicked', {name: 'buttonName', id: 123 });
+datadogLogs.logger.info('Something happened on index', {name: 'buttonName', id: 123 });
 
 datadogRum.init({
     applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',

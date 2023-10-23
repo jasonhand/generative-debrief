@@ -3,6 +3,8 @@ import "./App.css";
 import ResponseComponent from "./ResponseComponent";
 import { datadogLogs } from '@datadog/browser-logs';
 
+datadogLogs.logger.info('Something happened on index', {name: 'buttonName', id: 123 });
+
 //RUM Integration //
 import { datadogRum } from '@datadog/browser-rum';
 //

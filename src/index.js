@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { datadogLogs } from '@datadog/browser-logs';
 
+datadogLogs.logger.info('Something happened on index', {name: 'buttonName', id: 123 });
+
 //RUM Integration //
 import { datadogRum } from '@datadog/browser-rum';
 //
