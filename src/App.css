@@ -178,3 +178,31 @@ select#model option {
   background-color: #e8b7db; /* Set the background color to match the form */
   color: #632CA6; /* Text color matching the form color */
 }
+
+/*Word Count */
+/* Apply styling to the label */
+label[for="word_count"] {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #632CA6; /* Text color matching the form color */
+}
+
+/* Style the select element (dropdown list) */
+select#word_count {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #e8b7db; /* Set the background color to match the form */
+  color: #632CA6; /* Text color matching the form color */
+}
+
+/* Style the options within the select element */
+select#word_count option {
+  font-size: 16px;
+  padding: 5px;
+  background-color: #e8b7db; /* Set the background color to match the form */
+  color: #632CA6; /* Text color matching the form color */
+}

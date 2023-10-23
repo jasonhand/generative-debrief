@@ -38,7 +38,8 @@ function App() {
     takeaways: "",
     tools: "",
     links: "",
-    model: ""
+    model: "",
+    word_count: ""
   });
 
   const [submissionStatus, setSubmissionStatus] = useState("unsubmitted");
@@ -83,7 +84,8 @@ function App() {
             takeaways: "",
             tools: "",
             links: "",
-            model: ""
+            model: "",
+            word_count: ""
           });
         }, 2000);
       } else {
@@ -125,8 +127,13 @@ function App() {
           <input type="text" name="links" placeholder="Type your links mentioned" onChange={handleChange} />
           <label htmlFor="model">Model:</label>
             <select id="model" name="model" defaultValue="ChatGPT4" onChange={handleChange}>
-              <option value="ChatGPT3">ChatGPT3.5-turbo</option>
-              <option value="ChatGPT4">ChatGPT4</option>
+              <option value="gpt-3.5-turbo">ChatGPT3.5-turbo</option>
+              <option value="gpt4">ChatGPT4</option>
+            </select>
+            <label htmlFor="word_count">Word Count:</label>
+            <select id="word_count" name="word_count" defaultValue="500" onChange={handleChange}>
+              <option value="500">500</option>
+              <option value="750">750</option>
             </select>
           <button type="submit">Submit</button>
         </form>
