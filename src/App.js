@@ -132,6 +132,7 @@ function App() {
             </select>
             <label htmlFor="word_count">Word Count:</label>
             <select id="word_count" name="word_count" defaultValue="500" onChange={handleChange}>
+              <option value="250">500</option>
               <option value="500">500</option>
               <option value="750">750</option>
             </select>
