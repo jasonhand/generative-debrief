@@ -57,7 +57,7 @@ function App() {
     };
 
   // Log the postData object to the console
-  console.log("POST Data:", JSON.stringify(postData));
+  //console.log("POST Data:", JSON.stringify(postData));
 
     try {
       setSubmissionStatus("loading"); // Set loading state
@@ -147,6 +147,16 @@ function App() {
         <ResponseComponent responseMessage={responseMessage} />
       ) : (
         <div className="waiting-message"><br></br>Generating Debriefing Document ... Please wait.</div>
+      )}
+      {/* Display the error message */}
+      {submissionStatus === "error" && (
+        <>
+        <div className="overlay"></div>
+        <div className="error-message">It's not your fault!<br></br><br></br>
+          {responseMessage}
+          <button onClick={() => window.location.reload()} style={{marginTop: '20px'}}>Try Again</button>
+        </div>
+        </>
       )}
     </div>
   );
