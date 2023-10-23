@@ -61,6 +61,7 @@ button:hover {
   font-size: 24px;
   margin-top: 20px;
   color: #a310a8;
+  padding: 40px;
   animation: fadeInOut 2s infinite;
 }
 
