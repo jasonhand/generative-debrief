@@ -56,6 +56,9 @@ function App() {
       presentation: formData,
     };
 
+  // Log the postData object to the console
+  console.log("POST Data:", JSON.stringify(postData));
+
     try {
       setSubmissionStatus("loading"); // Set loading state
 
@@ -132,11 +135,13 @@ function App() {
             </select>
             <label htmlFor="word_count">Word Count:</label>
             <select id="word_count" name="word_count" defaultValue="500" onChange={handleChange}>
-              <option value="250">500</option>
+              <option value="250">250</option>
               <option value="500">500</option>
               <option value="750">750</option>
             </select>
           <button type="submit">Submit</button>
+
+
         </form>
       ) : submissionStatus === "success" ? (
         <ResponseComponent responseMessage={responseMessage} />
