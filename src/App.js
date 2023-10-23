@@ -4,6 +4,12 @@ import React, { useState } from "react";
 import "./App.css";
 import ResponseComponent from "./ResponseComponent";
 
+datadogLogs.init({
+  clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
+  site: 'datadoghq.com',
+  forwardErrorsToLogs: true,
+  sessionSampleRate: 100,
+})
 
 datadogLogs.logger.info('Something happened on App.js', {name: 'app_log', id: 123 });
 
@@ -134,7 +140,7 @@ function App() {
               <option value="gpt-4">ChatGPT4</option>
             </select>
             <label htmlFor="word_count">Word Count:</label>
-            <select id="word_count" name="word_count" defaultValue="500" onChange={handleChange}>
+            <select id="word_count" name="word_count" defaultValue="250" onChange={handleChange}>
               <option value="250">250</option>
               <option value="500">500</option>
               <option value="750">750</option>

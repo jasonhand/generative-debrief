@@ -6,6 +6,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+datadogLogs.init({
+  clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
+  site: 'datadoghq.com',
+  forwardErrorsToLogs: true,
+  sessionSampleRate: 100,
+})
 
 datadogLogs.logger.info('Something happened on Index.js', {name: 'index_log', id: 124 });
 
