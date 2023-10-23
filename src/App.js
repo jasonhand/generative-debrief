@@ -36,10 +36,10 @@ function App() {
     abstract: "",
     agenda: "",
     takeaways: "",
-    tools: "",
-    links: "",
-    model: "",
-    word_count: ""
+    tools: "Datadog", //Default value
+    links: "datadoghq.com", //Default value
+    model: "gpt-4", //Default value
+    word_count: "500" //Default value
   });
 
   const [submissionStatus, setSubmissionStatus] = useState("unsubmitted");
@@ -82,10 +82,10 @@ function App() {
             abstract: "",
             agenda: "",
             takeaways: "",
-            tools: "",
-            links: "",
-            model: "",
-            word_count: ""
+            tools: "Datadog", //Default value
+            links: "datadoghq.com", //Default value
+            model: "gpt-4", //Default value
+            word_count: "500" //Default value
           });
         }, 2000);
       } else {
