@@ -126,9 +126,9 @@ function App() {
           <label>Links:</label>
           <input type="text" name="links" placeholder="Type your links mentioned" onChange={handleChange} />
           <label htmlFor="model">Model:</label>
-            <select id="model" name="model" defaultValue="ChatGPT4" onChange={handleChange}>
+            <select id="model" name="model" defaultValue="gpt-4" onChange={handleChange}>
               <option value="gpt-3.5-turbo">ChatGPT3.5-turbo</option>
-              <option value="gpt4">ChatGPT4</option>
+              <option value="gpt-4">ChatGPT4</option>
             </select>
             <label htmlFor="word_count">Word Count:</label>
             <select id="word_count" name="word_count" defaultValue="500" onChange={handleChange}>
