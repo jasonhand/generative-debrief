@@ -1,7 +1,9 @@
 import React from "react";
 //RUM Integration //
 import { datadogRum } from '@datadog/browser-rum';
+import { datadogLogs } from '@datadog/browser-logs';
 
+datadogLogs.logger.info('Button clicked', {name: 'buttonName', id: 123 });
 
 datadogRum.init({
     applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',
@@ -10,7 +12,7 @@ datadogRum.init({
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
-    version: '1.0.4', 
+    version: '1.0.5', 
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
     trackUserInteractions: true,
@@ -22,6 +24,16 @@ datadogRum.init({
 datadogRum.startSessionReplayRecording();
 
 // End RUM Integration
+
+// Adding Logging
+datadogLogs.init({
+    clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
+    site: 'datadoghq.com',
+    forwardErrorsToLogs: true,
+    sessionSampleRate: 100
+});
+
+// End Logging
 
 function ResponseComponent({ responseMessage }) {
   const handleRefresh = () => {

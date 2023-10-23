@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { datadogLogs } from '@datadog/browser-logs';
 
 //RUM Integration //
 import { datadogRum } from '@datadog/browser-rum';
@@ -15,7 +16,7 @@ datadogRum.init({
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
-    version: '1.0.4', 
+    version: '1.0.5', 
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
     trackUserInteractions: true,
@@ -28,6 +29,16 @@ datadogRum.init({
 datadogRum.startSessionReplayRecording();
 
 // End RUM Integration
+
+// Adding Logging
+datadogLogs.init({
+    clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
+    site: 'datadoghq.com',
+    forwardErrorsToLogs: true,
+    sessionSampleRate: 100
+});
+
+// End Logging
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
