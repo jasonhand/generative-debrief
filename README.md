@@ -1,6 +1,8 @@
 # Datadog Generative Debriefing Doc Generator
 Demo to show off generative AI creation with a Logic App along with Monitoring on Datadog
 
+[View live Demo](https://purple-desert-0fca51310.3.azurestaticapps.net/)
+
 ## What is this?
 This is a basic React app to display a form for users to submit details about a recent presentation which is then sent to an Azure Logic App.
 
