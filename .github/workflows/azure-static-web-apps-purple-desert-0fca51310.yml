@@ -9,6 +9,14 @@ on:
     branches:
       - main
 
+# Hiding secrets in GitHub Secrets
+env:
+  REACT_APP_DD_CLIENT_TOKEN: ${{ secrets.REACT_APP_DD_CLIENT_TOKEN }}
+  REACT_APP_DD_APPLICATION_ID: ${{ secrets.REACT_APP_DD_APPLICATION_ID }}
+  REACT_APP_AZURE_URL: ${{ secrets.REACT_APP_AZURE_URL }}
+  REACT_APP_DD_SITE: ${{ secrets.REACT_APP_DD_SITE }}
+# End Secrets  
+
 jobs:
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')

@@ -7,8 +7,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 datadogLogs.init({
-  clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
-  site: 'datadoghq.com',
+  clientToken: process.env.REACT_APP_DD_CLIENT_TOKEN,
+  site: process.env.REACT_APP_DD_SITE,
   forwardErrorsToLogs: true,
   sessionSampleRate: 100,
 })
@@ -16,9 +16,9 @@ datadogLogs.init({
 datadogLogs.logger.info('Something happened on Index.js', {name: 'index_log', id: 124 });
 
 datadogRum.init({
-    applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',
-    clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
-    site: 'datadoghq.com',
+  applicationId: process.env.REACT_APP_DD_APPLICATION_ID,
+  clientToken: process.env.REACT_APP_DD_CLIENT_TOKEN,
+  site: process.env.REACT_APP_DD_SITE,
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 

@@ -5,8 +5,8 @@ import "./App.css";
 import ResponseComponent from "./ResponseComponent";
 
 datadogLogs.init({
-  clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
-  site: 'datadoghq.com',
+  clientToken: process.env.REACT_APP_DD_CLIENT_TOKEN,
+  site: process.env.REACT_APP_DD_SITE,
   forwardErrorsToLogs: true,
   sessionSampleRate: 100,
 })
@@ -14,9 +14,9 @@ datadogLogs.init({
 datadogLogs.logger.info('Something happened on App.js', {name: 'app_log', id: 123 });
 
 datadogRum.init({
-    applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',
-    clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
-    site: 'datadoghq.com',
+    applicationId: process.env.REACT_APP_DD_APPLICATION_ID,
+    clientToken: process.env.REACT_APP_DD_CLIENT_TOKEN,
+    site: process.env.REACT_APP_DD_SITE,
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
@@ -68,7 +68,7 @@ function App() {
     try {
       setSubmissionStatus("loading"); // Set loading state
 
-      const response = await fetch("https://prod-17.eastus.logic.azure.com:443/workflows/f34a56bb29b749db9f3760917efa0e39/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ZKRPOrU-imIbjU3DPlXh4ojHInJOOn3JQiHH7Airdqo", {
+      const response = await fetch(process.env.REACT_APP_AZURE_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
