@@ -18,3 +18,5 @@ From there, the Logic App processes the submission and sends prompts to ChatGPT 
 - RUM Blog
 
 ![UI screenshot](images/screenshot.png)
+
+
