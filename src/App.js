@@ -140,7 +140,8 @@ function App() {
               <option value="gpt-4">ChatGPT4</option>
             </select>
             <label htmlFor="word_count">Word Count:</label>
-            <select id="word_count" name="word_count" defaultValue="250" onChange={handleChange}>
+            <select id="word_count" name="word_count" defaultValue="100" onChange={handleChange}>
+              <option value="100">100</option>
               <option value="250">250</option>
               <option value="500">500</option>
               <option value="750">750</option>

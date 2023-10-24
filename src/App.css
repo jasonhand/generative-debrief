@@ -80,7 +80,6 @@ button:hover {
 .responseTitle {
   font-size: 32px;
   font-weight: bolder;
-  margin-top: 20px;
   padding: 20px;
   color: #632CA6;
 }
@@ -88,7 +87,7 @@ button:hover {
 .response {
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
-  padding: 25px;
+  padding-right: 50px;
   margin: 50px;
   color: #632CA6;
   margin-left: 50px;
