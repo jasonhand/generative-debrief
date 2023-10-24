@@ -13,7 +13,7 @@ datadogLogs.init({
   sessionSampleRate: 100,
 })
 
-datadogLogs.logger.info('Something happened on Index.js', {name: 'index_log', id: 124 });
+//datadogLogs.logger.info('Something happened on Index.js', {name: 'index_log', id: 124 });
 
 datadogRum.init({
   applicationId: process.env.REACT_APP_DD_APPLICATION_ID,

@@ -9,7 +9,7 @@ datadogLogs.init({
   sessionSampleRate: 100,
 })
 
-datadogLogs.logger.info('Something happened on ResponseComponent.js', {name: 'response_log', id: 125 });
+//datadogLogs.logger.info('Something happened on ResponseComponent.js', {name: 'response_log', id: 125 });
 
 datadogRum.init({
     applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',

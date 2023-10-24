@@ -88,8 +88,12 @@ button:hover {
 .response {
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
-  padding: 75px;
+  padding: 25px;
+  margin: 50px;
   color: #632CA6;
+  margin-left: 50px;
+  margin-right: 50px;
+  line-height: 1.5;
 }
 
 .instructions {

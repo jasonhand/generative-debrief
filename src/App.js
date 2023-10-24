@@ -11,7 +11,7 @@ datadogLogs.init({
   sessionSampleRate: 100,
 })
 
-datadogLogs.logger.info('Something happened on App.js', {name: 'app_log', id: 123 });
+datadogLogs.logger.info('The App was loaded in a browser!', {name: 'app_log', id: 123 });
 
 datadogRum.init({
     applicationId: process.env.REACT_APP_DD_APPLICATION_ID,
