@@ -91,10 +91,10 @@ function App() {
             abstract: "",
             agenda: "",
             takeaways: "",
-            tools: "Datadog", //Default value
-            links: "datadoghq.com", //Default value
-            model: "gpt-4", //Default value
-            word_count: "500" //Default value
+            tools: "", //Default value
+            links: "", //Default value
+            model: "", //Default value
+            word_count: "" //Default value
           });
         }, 2000);
       } else {
