@@ -3,8 +3,8 @@ import { datadogRum } from '@datadog/browser-rum';
 import { datadogLogs } from '@datadog/browser-logs';
 
 datadogLogs.init({
-  clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
-  site: 'datadoghq.com',
+  clientToken: process.env.REACT_APP_DD_CLIENT_TOKEN,
+  site: process.env.REACT_APP_DD_SITE,
   forwardErrorsToLogs: true,
   sessionSampleRate: 100,
 })
@@ -12,9 +12,9 @@ datadogLogs.init({
 //datadogLogs.logger.info('Something happened on ResponseComponent.js', {name: 'response_log', id: 125 });
 
 datadogRum.init({
-    applicationId: '866db0f2-7371-4d4a-8b77-340c5e498544',
-    clientToken: 'pub5096d6768cfbb8aa98b73877207a7bec',
-    site: 'datadoghq.com',
+  applicationId: process.env.REACT_APP_DD_APPLICATION_ID,
+  clientToken: process.env.REACT_APP_DD_CLIENT_TOKEN,
+  site: process.env.REACT_APP_DD_SITE,
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
@@ -32,14 +32,15 @@ datadogRum.startSessionReplayRecording();
 
 // End RUM Integration
 
-function ResponseComponent({ responseMessage }) {
+function ResponseComponent({ responseMessage, responseTitle }) {
   const handleRefresh = () => {
     window.location.reload();
   };
 
   return (
     <div>
-      <div className="responseTitle">Generative Results</div>
+      <div className="responseTitle">OpenAI Generated Results</div>
+      <div className="responseSummaryTitle">{responseTitle}</div>
       <div className="response">{responseMessage}</div>
       <div className="instructions">Copy and paste this debrief into a markdown (.md) file</div>
       <button onClick={handleRefresh}>Start Over</button>

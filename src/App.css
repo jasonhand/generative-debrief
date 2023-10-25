@@ -79,7 +79,7 @@ button:hover {
 
 .responseTitle {
   font-size: 32px;
-  font-weight: bolder;
+  font-weight: bold;
   padding: 20px;
   color: #632CA6;
 }
@@ -88,11 +88,21 @@ button:hover {
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
   padding-right: 50px;
-  margin: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #632CA6;
   margin-left: 50px;
   margin-right: 50px;
   line-height: 1.5;
+}
+
+.responseSummaryTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 44px;
+  font-weight: bolder;
+  padding: 20px;
+  color: #ffffff;
+  background: #e622d9;
 }
 
 .instructions {

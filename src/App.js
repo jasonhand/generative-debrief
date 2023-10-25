@@ -45,11 +45,13 @@ function App() {
     tools: "Datadog", //Default value
     links: "datadoghq.com", //Default value
     model: "gpt-4", //Default value
-    word_count: "500" //Default value
+    word_count: "100" //Default value
   });
 
   const [submissionStatus, setSubmissionStatus] = useState("unsubmitted");
   const [responseMessage, setResponseMessage] = useState("");
+  const [responseTitle, setResponseTitle] = useState("");
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -78,8 +80,8 @@ function App() {
 
       if (response.ok) {
         const responseData = await response.json();
-        //const responseBody = responseData.Body;
         setResponseMessage(responseData.response);
+        setResponseTitle(responseData.title);  // New line to set the title
         setSubmissionStatus("success");
         console.log("Submission successful");
 
@@ -151,7 +153,7 @@ function App() {
 
         </form>
       ) : submissionStatus === "success" ? (
-        <ResponseComponent responseMessage={responseMessage} />
+        <ResponseComponent responseMessage={responseMessage} responseTitle={responseTitle} />
       ) : (
         <div className="waiting-message"><br></br>Generating Debriefing Document ... Please wait.</div>
       )}
