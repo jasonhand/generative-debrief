@@ -1,6 +1,6 @@
 import { datadogRum } from '@datadog/browser-rum';
 import { datadogLogs } from '@datadog/browser-logs';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import ResponseComponent from "./ResponseComponent";
 
@@ -20,7 +20,7 @@ datadogRum.init({
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
-    version: '1.0.6', 
+    version: '1.0.7', 
     forwardErrorsToLogs: true,
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
@@ -45,13 +45,31 @@ function App() {
     tools: "Datadog", //Default value
     links: "datadoghq.com", //Default value
     model: "gpt-4", //Default value
-    word_count: "100" //Default value
+    word_count: "150" //Default value
   });
-
+  
   const [submissionStatus, setSubmissionStatus] = useState("unsubmitted");
   const [responseMessage, setResponseMessage] = useState("");
   const [responseTitle, setResponseTitle] = useState("");
+  // Timer
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [isTimerActive, setIsTimerActive] = useState(false);
 
+  useEffect(() => {
+    let interval;
+    if (isTimerActive) {
+      interval = setInterval(() => {
+        setElapsedTime(prevTime => prevTime + 1);
+      }, 10);
+    } else {
+      clearInterval(interval);
+    }
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isTimerActive]);
+  
+  // End Timer
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,6 +78,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsTimerActive(true);  // Start the timer
     const postData = {
       presentation: formData,
     };
@@ -84,6 +103,7 @@ function App() {
         setResponseTitle(responseData.title);  // New line to set the title
         setSubmissionStatus("success");
         console.log("Submission successful");
+        setIsTimerActive(false);  // Stop the timer when the call is done, success or failure
 
         // Clear form fields after a short delay (e.g., 2 seconds)
         setTimeout(() => {
@@ -108,11 +128,14 @@ function App() {
       setSubmissionStatus("error");
       setResponseMessage("Error: " + error.message);
       console.log("Error:", error);
+      setIsTimerActive(false);  // Stop the timer in case of error
     }
   };
 
   return (
     <div className="App">
+      {/* Always display the timer here */}
+      <div className="timer">{(elapsedTime / 100).toFixed(3)}s</div>
       {submissionStatus === "unsubmitted" || submissionStatus === "error" ? (
         <form onSubmit={handleSubmit}>
           {/* Form fields */}
@@ -142,11 +165,10 @@ function App() {
               <option value="gpt-4">ChatGPT4</option>
             </select>
             <label htmlFor="word_count">Word Count:</label>
-            <select id="word_count" name="word_count" defaultValue="100" onChange={handleChange}>
-              <option value="100">100</option>
+            <select id="word_count" name="word_count" defaultValue="150" onChange={handleChange}>
+              <option value="100">150</option>
               <option value="250">250</option>
-              <option value="500">500</option>
-              <option value="750">750</option>
+              <option value="500">350</option>
             </select>
           <button type="submit">Submit</button>
 
@@ -169,6 +191,7 @@ function App() {
       )}
     </div>
   );
+  
 }
 
 export default App;

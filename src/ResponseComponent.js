@@ -18,7 +18,7 @@ datadogRum.init({
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
-    version: '1.0.6', 
+    version: '1.0.7', 
     forwardErrorsToLogs: true,
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
@@ -39,7 +39,6 @@ function ResponseComponent({ responseMessage, responseTitle }) {
 
   return (
     <div>
-      <div className="responseTitle">OpenAI Generated Results</div>
       <div className="responseSummaryTitle">{responseTitle}</div>
       <div className="response">{responseMessage}</div>
       <div className="instructions">Copy and paste this debrief into a markdown (.md) file</div>
