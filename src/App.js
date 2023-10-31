@@ -44,7 +44,7 @@ function App() {
     takeaways: "",
     tools: "Datadog", //Default value
     links: "datadoghq.com", //Default value
-    model: "gpt-4", //Default value
+    model: "gpt-3.5-turbo", //Default value
     word_count: "150" //Default value
   });
   
@@ -113,10 +113,10 @@ function App() {
             abstract: "",
             agenda: "",
             takeaways: "",
-            tools: "", //Default value
-            links: "", //Default value
-            model: "", //Default value
-            word_count: "" //Default value
+            tools: "", 
+            links: "",
+            model: "", 
+            word_count: "" 
           });
         }, 2000);
       } else {
