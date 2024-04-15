@@ -145,20 +145,21 @@ function App() {
           <label>Presenter:</label>
           <input type="text" name="presenter" placeholder="Type the presenter(s) name(s)" onChange={handleChange} />
 
-          <label>Abstract:</label>
-          <input type="text" name="abstract" placeholder="Type the abstract or a brief summary in your words" onChange={handleChange} />
+          <label>Notes:</label>
+          <input type="text" name="abstract" placeholder="Type the Notes or a brief summary in your words" onChange={handleChange} />
 
           <label htmlFor="model">Model:</label>
             <select id="model" name="model" defaultValue="gpt-4" onChange={handleChange}>
               <option value="gpt-3.5-turbo">ChatGPT3.5-turbo</option>
               <option value="gpt-4">ChatGPT4</option>
+              <option value="gpt-4-turbo-preview">ChatGPT4 Turbo Preview</option>
 
             </select>
             <label htmlFor="word_count">Word Count:</label>
             <select id="word_count" name="word_count" defaultValue="150" onChange={handleChange}>
               <option value="100">150</option>
-              <option value="250">250</option>
-              <option value="500">350</option>
+              <option value="200">250</option>
+              <option value="300">350</option>
             </select>
           <button type="submit">Submit</button>
 
