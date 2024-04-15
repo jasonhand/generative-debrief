@@ -20,7 +20,7 @@ datadogRum.init({
     service:'generative-debrief',
     env:'azure-production',
     // Specify a version number to identify the deployed version of your application in Datadog 
-    version: '1.0.7', 
+    version: '2.0.0', 
     forwardErrorsToLogs: true,
     sessionSampleRate:100,
     sessionReplaySampleRate: 100,
@@ -40,10 +40,6 @@ function App() {
     title: "",
     presenter: "",
     abstract: "",
-    agenda: "",
-    takeaways: "",
-    tools: "Datadog", //Default value
-    links: "datadoghq.com", //Default value
     model: "gpt-3.5-turbo", //Default value
     word_count: "150" //Default value
   });
