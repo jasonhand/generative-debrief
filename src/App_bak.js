@@ -148,6 +148,17 @@ function App() {
           <label>Abstract:</label>
           <input type="text" name="abstract" placeholder="Type the abstract or a brief summary in your words" onChange={handleChange} />
 
+          <label>Agenda:</label>
+          <input type="text" name="agenda" placeholder="Type your presentation agenda separated by commas" onChange={handleChange} />
+
+          <label>Takeaways:</label>
+          <input type="text" name="takeaways" placeholder="Type your takeaways" onChange={handleChange} />
+
+          <label>Tools:</label>
+          <input type="text" name="tools" placeholder="Type your tools mentioned" onChange={handleChange} />
+
+          <label>Links:</label>
+          <input type="text" name="links" placeholder="Type your links mentioned" onChange={handleChange} />
           <label htmlFor="model">Model:</label>
             <select id="model" name="model" defaultValue="gpt-4" onChange={handleChange}>
               <option value="gpt-3.5-turbo">ChatGPT3.5-turbo</option>

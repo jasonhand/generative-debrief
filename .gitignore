@@ -2,3 +2,4 @@ node_modules
 build
 workflow
 .env
+.DS_Store
