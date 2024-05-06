@@ -11,8 +11,6 @@ datadogLogs.init({
   sessionSampleRate: 100,
 })
 
-//datadogLogs.logger.info('The App was loaded in a browser!', {name: 'app_log', id: 123 });
-
 datadogRum.init({
     applicationId: process.env.REACT_APP_DD_APPLICATION_ID,
     clientToken: process.env.REACT_APP_DD_CLIENT_TOKEN,
@@ -141,7 +139,7 @@ function App() {
           <label>Presenter:</label>
           <input type="text" name="presenter" placeholder="Type the presenter(s) name(s)" onChange={handleChange} />
 
-          <label>Notes:</label>
+          <label>Transcript:</label>
           <input type="text" name="abstract" placeholder="Type the Notes or a brief summary in your words" onChange={handleChange} />
 
           <label htmlFor="model">Model:</label>
