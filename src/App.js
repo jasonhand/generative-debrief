@@ -17,7 +17,6 @@ datadogRum.init({
     site: process.env.REACT_APP_DD_SITE,
     service:'generative-debrief',
     env:'azure-production',
-    // Specify a version number to identify the deployed version of your application in Datadog 
     version: '2.0.0', 
     forwardErrorsToLogs: true,
     sessionSampleRate:100,
@@ -37,7 +36,7 @@ function App() {
   const [formData, setFormData] = useState({
     title: "",
     presenter: "",
-    abstract: "",
+    transcript: "",
     model: "gpt-3.5-turbo", //Default value
     word_count: "150" //Default value
   });
@@ -104,11 +103,7 @@ function App() {
           setFormData({
             title: "",
             presenter: "",
-            abstract: "",
-            agenda: "",
-            takeaways: "",
-            tools: "", 
-            links: "",
+            transcript: "",
             model: "", 
             word_count: "" 
           });
@@ -140,7 +135,7 @@ function App() {
           <input type="text" name="presenter" placeholder="Type the presenter(s) name(s)" onChange={handleChange} />
 
           <label>Transcript:</label>
-          <input type="text" name="abstract" placeholder="Type the Notes or a brief summary in your words" onChange={handleChange} />
+          <input type="text" name="transcript" placeholder="Provide the text transcript" onChange={handleChange} />
 
           <label htmlFor="model">Model:</label>
             <select id="model" name="model" defaultValue="gpt-4" onChange={handleChange}>

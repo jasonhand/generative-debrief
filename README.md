@@ -24,6 +24,6 @@ From there, the Logic App processes the submission and sends prompts to ChatGPT 
 - [Monitor your GitHub Actions workflows with Datadog CI Visibility](https://www.datadoghq.com/blog/datadog-github-actions-ci-visibility/)
 - [GitHub Integration](https://docs.datadoghq.com/integrations/rapdev_github)
 
-![UI screenshot](images/screenshot.png)
+![UI screenshot](images/screenshot.jpg)
 
 

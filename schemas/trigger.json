@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "presentation": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "presenter": {
+                    "type": "string"
+                },
+                "transcript": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "word_count": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
