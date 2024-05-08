@@ -8,7 +8,10 @@ This is a basic React app to display a form for users to submit details about a 
 
 From there, the Logic App processes the submission and sends prompts to ChatGPT to generate a new response which is then displayed to the user.
 
+
 ## Resources
+
+[Building and Monitoring Generative AI Azure Logic Apps Slides](slides/Azure-Logic-App-GenAI-Webinar.pdf)
 
 - [OpenAI Integration](https://dtdg.co/4a7SVo1)
 - [OpenAI Integration Blog](https://dtdg.co/4bMALK3)
