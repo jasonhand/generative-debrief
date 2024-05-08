@@ -10,20 +10,21 @@ From there, the Logic App processes the submission and sends prompts to ChatGPT 
 
 ## Resources
 
-- [Azure OpenAI Integration Docs](https://docs.datadoghq.com/integrations/azure_openai/)
-- [OpenAI Integration](https://docs.datadoghq.com/integrations/openai)
-- [OpenAI Integration Blog](https://www.datadoghq.com/blog/monitor-openai-with-datadog/)
-- [OpenAI Monitoring](https://www.datadoghq.com/solutions/openai/)
-- [Azure Integration](https://www.datadoghq.com/solutions/azure/)
-- [Logic App Integration Docs](https://docs.datadoghq.com/integrations/azure_logic_app)
-- [Logic App Integration Blog](https://www.datadoghq.com/blog/monitor-azure-logic-app-workflows-datadog/)
-- [RUM Documentation](https://docs.datadoghq.com/real_user_monitoring/)
-- [Real User Monitoring](https://docs.datadoghq.com/real_user_monitoring/)
-- [Logging GitHub Actions]()
-- [CI Pipelines]()
-- [Monitor your GitHub Actions workflows with Datadog CI Visibility](https://www.datadoghq.com/blog/datadog-github-actions-ci-visibility/)
-- [GitHub Integration](https://docs.datadoghq.com/integrations/rapdev_github)
+- [OpenAI Integration](https://dtdg.co/4a7SVo1)
+- [OpenAI Integration Blog](https://dtdg.co/4bMALK3)
+- [OpenAI Monitoring](https://dtdg.co/3WyylKp)
+- [Azure Integration](https://dtdg.co/3yl1H4P)
+- [Logic App Integration Docs](https://dtdg.co/4aeSXut)
+- [Logic App Integration Blog](https://dtdg.co/3QBb1YT)
+- [RUM Documentation](https://dtdg.co/3V1HiuR)
+- [Azure OpenAI Integration Docs](https://dtdg.co/4aZLxwl)
+- [CI Pipelines](https://dtdg.co/4doM5NQ)
+- [Monitor your GitHub Actions workflows with Datadog CI Visibility](https://dtdg.co/3QEAIb0)
+- [GitHub Integration](https://dtdg.co/3UwZbQC)
 
-![UI screenshot](images/screenshot.jpg)
+![UI screenshot](images/screenshot.png)
+
+
+
 
 
