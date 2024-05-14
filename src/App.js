@@ -142,6 +142,7 @@ function App() {
               <option value="gpt-3.5-turbo">ChatGPT3.5-turbo</option>
               <option value="gpt-4">ChatGPT4</option>
               <option value="gpt-4-turbo-preview">ChatGPT4 Turbo Preview</option>
+              <option value="gpt-4o">ChatGPT-4o</option>
 
             </select>
             <label htmlFor="word_count">Word Count:</label>
@@ -149,6 +150,7 @@ function App() {
               <option value="100">150</option>
               <option value="200">250</option>
               <option value="300">350</option>
+              <option value="500">500</option>
             </select>
           <button type="submit">Submit</button>
 
