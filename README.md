@@ -11,6 +11,8 @@ From there, the Logic App processes the submission and sends prompts to ChatGPT 
 
 ## Resources
 
+[Watch the recording of this webinar](https://www.datadoghq.com/partner/azuregenai/)
+
 [Building and Monitoring Generative AI Azure Logic Apps Slides](slides/Azure-Logic-App-GenAI-Webinar.pdf)
 
 ![slides/Azure-Logic-App-GenAI-Webinar.pdf](images/slides.png)
